@@ -14,7 +14,7 @@
  * limitations under the License.
  **/
  
-module CCrypto [system] {
+module CCryptoLinux [system] {
        header "/usr/include/openssl/conf.h"
        header "/usr/include/openssl/evp.h"
        header "/usr/include/openssl/err.h"
@@ -28,3 +28,18 @@ module CCrypto [system] {
        link "ssl"
        link "crypto"
 }    
+
+module CCryptoOXS [system] {
+    header "/usr/local/opt/openssl/include/openssl/conf.h"
+    header "/usr/local/opt/openssl/include/openssl/evp.h"
+    header "/usr/local/opt/openssl/include/openssl/err.h"
+    header "/usr/local/opt/openssl/include/openssl/bio.h"
+    header "/usr/local/opt/openssl/include/openssl/ssl.h"
+    header "/usr/local/opt/openssl/include/openssl/md4.h"
+    header "/usr/local/opt/openssl/include/openssl/md5.h"
+    header "/usr/local/opt/openssl/include/openssl/sha.h"
+    header "/usr/local/opt/openssl/include/openssl/hmac.h"
+    header "/usr/local/opt/openssl/include/openssl/rand.h"
+    link "ssl"
+    link "crypto"
+}
